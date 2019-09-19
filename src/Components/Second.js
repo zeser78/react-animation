@@ -1,7 +1,15 @@
 import React, { Component } from "react";
 
-const Second = () => {
-  return <h1>Second</h1>;
-};
+import { CSSTransition } from "react-transition-group";
 
-export default Second;
+export const FADE_TIMEOUT = 3000;
+
+export default class Second extends Component {
+  //   defaultProps = {
+  //     in: false,
+  //     timeout: FADE_TIMEOUT
+  //   };
+  render() {
+    return <CSSTransition {...this.props} classNames={styles} />;
+  }
+}
