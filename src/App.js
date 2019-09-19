@@ -15,43 +15,12 @@ import Contact from "./pages/Contact";
 import "./App.css";
 
 export default class App extends Component {
-  //   constructor(props) {}
-  //   static defaultProps = {
-  //   routes: [
-  //     { path: "/", name: "Home", Component: Home },
-  //     { path: "/about", name: "About", Component: About },
-  //     { path: "/contact", name: "Contact", Component: Contact }
-  //   ]
-  //   };
-  //   fadeOut() {
-  //     if (routes[path] == "/") {
-  //       fade = "Home-title";
-  //       console.log(routes.path);
-  //     } else {
-  //       console.log(routes.path);
-  //     }
-  //   }
-  fadeOut() {
-    let fade;
-    return (fade = "Home-title");
-  }
   render() {
-    // let routes = [...this.props.routes];
     let routes = [
       { path: "/", name: "Home", Component: Home },
       { path: "/about", name: "About", Component: About },
       { path: "/contact", name: "Contact", Component: Contact }
     ];
-
-    // let routes = [...this.props.routes];
-
-    //   if (routes.path == "/") {
-    //     fade = "Home-title";
-    //     console.log("true" + routes.path);
-    //   } else {
-    //     fade = "Home-title";
-    //     console.log("false" + routes.path);
-    //   }
 
     return (
       <Router>
@@ -77,12 +46,12 @@ export default class App extends Component {
                 {({ match }) => (
                   <CSSTransition
                     in={match != null}
-                    timeout={10000}
+                    timeout={1000}
                     classNames="page"
                     unmountOnExit
                   >
                     <div className="page">
-                      <Component fade={this.fadeOut()} name="Sergio" />
+                      <Component />
                     </div>
                   </CSSTransition>
                 )}

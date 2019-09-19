@@ -1,12 +1,7 @@
 .container {
   position: relative;
 }
-.Home-title {
-  color: aquamarine;
 
-  transition: color 300ms;
-  transition-delay: 5000ms;
-}
 .page {
   position: absolute;
   left: 15px;
@@ -16,14 +11,12 @@
 .page-enter {
   opacity: 0;
   transform: scale(0.2);
-  /* transition-delay: 3s; */
 }
 
 .page-enter-active {
   opacity: 1;
   transform: scale(1);
-  transition: opacity 6000ms, transform 5000ms;
-  /* transition-delay: 2000ms; */
+  transition: opacity 600ms, transform 600ms;
 }
 
 .page-exit {
@@ -33,6 +26,6 @@
 
 .page-exit-active {
   opacity: 0;
-  transform: scale(0.9);
-  transition: opacity 3000ms, transform 3000ms ease-in-out;
+  transform: scale(1);
+  transition: opacity 600ms, transform 600ms;
 }
